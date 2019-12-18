@@ -17,9 +17,7 @@ import org.w3c.dom.Text;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
     static LinearLayout my_list;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,10 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         my_list = (LinearLayout) findViewById(R.id.scroll_view);
         addViews();
     }
-
-
     public void addViews() {
-
         for (int i = 1; i <= 100; i++) {
             //gets the view from view.xml and stores it into v, casting it into TextView
             TextView v = (TextView) getLayoutInflater().inflate(R.layout.list_item, null);
@@ -46,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             my_list.addView(v);
         }
     }
-
     @Override
     public void onClick(View v) {
         //Create a toast with the number of the element clicked based on its id.
