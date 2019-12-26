@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String> list_items;
+    ArrayList<String> names_arr;
     RecyclerView my_recycler_view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
         my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_id);
 
         // Initialize and populate the ArrayList with items
-        list_items = new ArrayList<String>();
+        names_arr = new ArrayList<String>();
         for (int i = 1; i <= 100; i++){
-            list_items.add("Item " + i);
+            names_arr.add("Item " + i);
         }
 
         // Set to true to improve performance on fixed data sets
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         my_recycler_view.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
         // Sets the original data set to the names_arr through the MyAdapter constructor.
-        MyAdapter adapter = new MyAdapter(list_items);
+        MyAdapter adapter = new MyAdapter(names_arr);
         // Set the newly created adapter and layour manager
         my_recycler_view.setAdapter(adapter);
         my_recycler_view.setLayoutManager(new LinearLayoutManager(this));

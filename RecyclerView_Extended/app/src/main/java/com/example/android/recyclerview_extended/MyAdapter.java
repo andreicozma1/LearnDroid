@@ -58,9 +58,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public int getItemCount() {
+        // Simply returns the size of our data set
         return my_data_set.size();
     }
 
+    // Define our own ViewHolder class which extends a basic RecyclerView.ViewHolder
+    // For each individual element that gets put into our RecyclerView, an instance of the MyViewHolder class gets created
+    // Ex: For 100 items, there are 100 instances of this class
     class MyViewHolder extends RecyclerView.ViewHolder{
         // Define a variable for each element which we want to change within our view holder.
         // These are elements part of item.xml which we gave IDs to
