@@ -10,19 +10,29 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button second_btn_object;
+    Button finish_main_btn_object;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       second_btn_object = (Button) findViewById(R.id.second_btn_id);
-       second_btn_object.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-               startActivity(intent);
-           }
-       });
+        second_btn_object = (Button) findViewById(R.id.second_btn_id);
+        finish_main_btn_object = (Button) findViewById(R.id.finish_main_btn_id);
+        second_btn_object.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        finish_main_btn_object.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // KILLS MainActivity. IF ONLY MAIN ACTIVITY WAS EVER OPENED, SHOULD KILL THE APP
+                finish();
+            }
+        });
     }
 }
