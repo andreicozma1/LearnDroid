@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground">
+<!--    RIPPLE EFFECT-->
+
+    <ImageView
+        android:id="@+id/my_image_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/my_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/my_switch_id"
+        android:layout_toRightOf="@id/my_image_id"
+        android:padding="20dp"
+        android:text="DEFAULT TEXT"
+        android:textSize="16sp" />
+
+    <Switch
+        android:id="@+id/my_switch_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:padding="15dp"
+        android:text="Switch"
+        android:textSize="16sp" />
+
+</RelativeLayout>

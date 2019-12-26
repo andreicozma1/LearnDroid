@@ -15,11 +15,11 @@ import java.util.ArrayList;
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     // Define an array list which will hold the items passed from MainActivity.java
-    ArrayList<String> list_items;
+    ArrayList<String> my_data_set;
 
     // Adapter constructor which sets the previously defined ArrayList to the values passed from MainActivity.java
     Adapter(ArrayList my_items_list){
-        list_items = my_items_list;
+        my_data_set = my_items_list;
     }
 
     // Define our own ViewHolder class which extends a basic RecyclerView.ViewHolder
@@ -53,18 +53,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         // This function gets called after creating a view holder and 'binds' it to the RecyclerView so we can see it
         // This is where we set and manipulate the individual elements of our view holder, which includes setting texts, images, etc.
-        holder.my_text_view.setText(list_items.get(position));
+        holder.my_text_view.setText(my_data_set.get(position));
     }
 
     @Override
     public int getItemCount() {
         // Simply returns the size of our data set
-        return list_items.size();
+        return my_data_set.size();
     }
 
     // A setter function which we can call from MainActivity.java in order to dynamically change the items within the RecyclerView
     void setListItems(ArrayList new_list_items){
-        list_items = new_list_items;
+        my_data_set = new_list_items;
         notifyDataSetChanged();
     }
 }

@@ -10,6 +10,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Defines a data set to use for constructing the list
+    ArrayList<String> list_items;
+
     // Defines a recycler view object to be used with the one defined within activity_main.xml
     RecyclerView my_recycler_view;
 
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         // sets the recycler view object to the ID defined within activity_main.xml
         my_recycler_view = (RecyclerView) findViewById(R.id.my_recycler_id);
 
-        ArrayList<String> list_items = new ArrayList<>();
+        list_items = new ArrayList<String>();
         // populate an ArrayList with example items to be displayed within our recycler view
         for(int i = 1; i <= 100; i++){
             list_items.add("Item " + i);
@@ -30,9 +33,10 @@ public class MainActivity extends AppCompatActivity {
         // Initializes a new instance of our adapter class which we created, and pass the list of items
         Adapter my_adapter = new Adapter(list_items);
 
+        // Set to true to improve performance if needed
+        my_recycler_view.setHasFixedSize(true);
         // Set the adapter and a linear layout manager on the recycler view to populate it with items
         my_recycler_view.setAdapter(my_adapter);
         my_recycler_view.setLayoutManager(new LinearLayoutManager(this));
-
     }
 }
