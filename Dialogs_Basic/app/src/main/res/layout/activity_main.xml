@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alert Dialog Examples:"
+        android:textSize="20sp"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/example_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="EX1. MESSAGE">
+    </Button>
+
+    <Button
+        android:id="@+id/example_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="EX2. MESSSAGE &amp; TITLE">
+    </Button>
+
+    <Button
+        android:id="@+id/example_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="EX3. MESSAGE &amp; TITLE &amp; ICON">
+    </Button>
+
+    <Button
+        android:id="@+id/example_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="EX4. WITH CANCEL &amp; DISMISS LISTENER">
+    </Button>
+
+    <Button
+        android:id="@+id/example_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="EX5. NON-CANCELLABLE W/ BUTTONS &amp; LISTENERS">
+    </Button>
+
+
+</LinearLayout>
