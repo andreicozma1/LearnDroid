@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_toolbar_id"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/MyToolbarColor"
+    android:logo="@mipmap/ic_launcher_round"
+    android:subtitle="MY TOOLBAR SUBTITLE"
+    android:subtitleTextColor="#FFFFFF"
+    android:title="MY TOOLBAR TITLE"
+    android:titleTextColor="#FFFFFF">
+</Toolbar>

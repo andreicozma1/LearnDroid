@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BASIC SETUP"
+            android:textSize="20sp"></TextView>
+
+        <Button
+            android:id="@+id/example_one_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="WebView in Layout XML"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/example_two_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="WebView NO Layout XML"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/example_three_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="HTTP w/ ClearText OFF ERROR"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OPTIONS"
+            android:textSize="20sp"></TextView>
+
+        <Button
+            android:id="@+id/example_four_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="W/ JAVASCRIPT"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/example_five_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="W/ ABOVE &amp; WebViewClient"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/example_six_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="W/ ABOVE &amp; BACK BTN NAV"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/example_seven_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="W/ ABOVE &amp; MENU NAV"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
