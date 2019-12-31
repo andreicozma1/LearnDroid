@@ -19,5 +19,7 @@ public class WebViewActivity_ex1 extends AppCompatActivity {
 
         Toast.makeText(this, "WebView defined in layout XML.\n Loading HTTPS with ClearText OFF", Toast.LENGTH_LONG).show();
         my_web_view.loadUrl("https://www.andreicozma.com");
+
+
     }
 }

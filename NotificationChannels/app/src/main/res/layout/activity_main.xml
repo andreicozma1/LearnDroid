@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="15dp">
+
+    <EditText
+        android:id="@+id/et_title_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_message_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Message"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_channel_1_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHANNEL 1"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btn_channel_2_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHANNEL 2"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btn_channel_3_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHANNEL 3"
+        android:textSize="16dp" />
+    <Button
+        android:id="@+id/btn_ch1_ongoing_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CH1 ONGOING"
+        android:textSize="16dp" />
+    <Button
+        android:id="@+id/btn_ch1_autocancel_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CH1 AUTOCANCEL"
+        android:textSize="16dp" />
+
+</LinearLayout>
