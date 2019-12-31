@@ -1,7 +1,10 @@
 package com.example.android.notificationchannels;
 
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button channel_3_btn;
     Button ch1_ongoing_btn;
     Button ch1_autocancel_btn;
+    Button ch1_action_btn;
 
     EditText et_title;
     EditText et_message;
@@ -78,6 +82,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ch1_action_btn = findViewById(R.id.btn_ch1_action_id);
+        ch1_action_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCh1_ActionColoredExpandable(et_title.getText().toString(), et_message.getText().toString());
+            }
+        });
+
+
     }
 
     void sendChannel1(String title, String message) {
@@ -128,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
         notif_manager.notify(3, builder_3.build());
     }
 
+    // We're going to send the following on Channel 1 so we can see the results better (because it has high priority)
 
     void sendCh1_Ongoing(String title, String message){
         Toast.makeText(this, "Clicked Ch1 Ongoing", Toast.LENGTH_SHORT).show();
@@ -155,6 +169,32 @@ public class MainActivity extends AppCompatActivity {
                 .setContentText(message)
                 .setAutoCancel(true) // Dismiss notification when clicked. Content Intent gets executed
                 .setContentIntent(PendingIntent.getActivity(this,0,new Intent(), 0)) // Empty intent does nothing
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE) // ONLY do this if your notification actually fits in one of the categories
+                .setPriority(NotificationCompat.PRIORITY_HIGH); // For compatibility with lower API versions
+
+        // A notification with the same ID will replace a previous instance of itself.
+        notif_manager.notify(5, builder.build());
+    }
+
+
+    void sendCh1_ActionColoredExpandable(String title, String message){
+        Toast.makeText(this, "Clicked Ch1 Action Colored Expandable", Toast.LENGTH_SHORT).show();
+
+        // Don't forget to define the broadcast receiver in it's class and in AndroidManifest
+        Intent action_broadcastIntent = new Intent(this, NotificationReceiver.class);
+        action_broadcastIntent.putExtra("passed_string", message);
+        PendingIntent action_pendingIntent = PendingIntent.getBroadcast(this,0,action_broadcastIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+
+        // The second argument of the Builder is ignored in lower API versions before Channels existed
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, MyApp.CHANNEL_1_ID)
+                .setSmallIcon(R.drawable.num_1)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setAutoCancel(true) // Dismiss notification when clicked. Content Intent gets executed
+                .setStyle(new NotificationCompat.BigTextStyle().bigText("This notification expands. You can now setContentText to be a summary of this long text, or keep them the same!\nOriginal message:" + message))
+                .setColor(Color.RED) // Sets the accent color of the notification
+                .setContentIntent(PendingIntent.getActivity(this,0,new Intent(), 0)) // Empty intent does nothing, just closes notification. Normally we'd open a specific activity based on the notification
+                .addAction(R.mipmap.ic_launcher_round, "Toast", action_pendingIntent) // Adds button based on it's intent.
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE) // ONLY do this if your notification actually fits in one of the categories
                 .setPriority(NotificationCompat.PRIORITY_HIGH); // For compatibility with lower API versions
 

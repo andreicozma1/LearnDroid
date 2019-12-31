@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Title"
+        android:text="My Notification Message"
         android:textSize="16sp" />
 
     <EditText
@@ -20,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Message"
+        android:text="This is a super long Android Notification message example that will probably get cut off without an expanding notification"
         android:textSize="16sp" />
 
     <Button
@@ -42,6 +44,7 @@
         android:layout_height="wrap_content"
         android:text="CHANNEL 3"
         android:textSize="16dp" />
+
     <Button
         android:id="@+id/btn_ch1_ongoing_id"
         android:layout_width="match_parent"
@@ -53,6 +56,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CH1 AUTOCANCEL"
+        android:textSize="16dp" />
+    <Button
+        android:id="@+id/btn_ch1_action_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CH1 ACTION COLORED EXPANDABLE"
         android:textSize="16dp" />
 
 </LinearLayout>
