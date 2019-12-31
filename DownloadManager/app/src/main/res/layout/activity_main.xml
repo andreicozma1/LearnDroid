@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download File from URL:"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+    <EditText
+        android:id="@+id/et_url_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="URL"
+        android:text="https://tr4.cbsistatic.com/hub/i/r/2019/08/27/37a65923-bee5-4f2d-9df9-64a94f84d8a5/resize/1200x/d202c05b6dd6ab3959e71d7412a8ea1d/android10hero.jpg" />
+
+    <EditText
+        android:id="@+id/et_download_name_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="File Name to Download"
+        android:text="My Downloaded File" />
+
+    <Button
+        android:id="@+id/btn_download_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DOWNLOAD" />
+
+</LinearLayout>
