@@ -20,7 +20,6 @@
         <EditText
             android:id="@+id/et_package_id"
             android:hint="com.android.chrome"
-            android:text="com.android.chrome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"/>
@@ -29,6 +28,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="App Preferences"
+            android:textSize="16sp"/>
+        <Button
+            android:id="@+id/btn_set_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Launcher"
             android:textSize="16sp"/>
 
     </LinearLayout>

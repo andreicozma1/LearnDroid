@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Normal">
-        <activity android:name=".MainActivity" android:theme="@style/Launcher">
+        <activity android:name=".LauncherActivity" android:theme="@style/Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.HOME" />
@@ -17,8 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity" >
+<!--            Setting the following from here will make the default activity to be opened to be SettingsActivity-->
+<!--            <action android:name="android.intent.action.MAIN"/>-->
+<!--            <category android:name="android.intent.category.LAUNCHER" />-->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
